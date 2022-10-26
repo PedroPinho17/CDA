@@ -1,0 +1,294 @@
+/*
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+}
+*/
+.section {
+    padding: 3.9rem 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container-campos {
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+.hero {
+    margin: 0 auto;
+    /*max-width: 1000px;*/
+    margin-top: 15vh;
+    height: 100vh;
+    background: url(/img/clube/Campos-Futebol.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: initial;
+    text-align: center;
+}
+
+.sub-headline {
+    font-size: 8rem;
+    font-family: var(--secondary-font);
+    color: #F2B705;
+    font-weight: 100;
+    line-height: .4;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation:fadeUp .5s forwards;
+    animation-delay: .5s;
+}
+
+.first-letter {
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+
+.headline {
+    color: #fff;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
+    animation:scale .5s forwards;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 100%;
+    max-width: 8.4rem;
+    height: .25rem;
+    background-color: #fff;
+    position: relative;
+    opacity: 0;
+    animation:grow 2s forwards;
+    animation-delay: .9s;
+}
+
+.line-right::before,
+.line-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+    opacity: 0;
+    animation:grow .5s forwards;
+    animation-delay: 1.2s;
+}
+
+.line-right::before {
+    border-right-color: #fff;
+    right: 0;
+}
+
+.line-left::before {
+    border-left-color: #fff;
+    left: 0;
+}
+
+.asterisk {
+    font-size: 1.2rem;
+    color: #F2B705;
+    margin: 0 1.6rem;
+    opacity: 0;
+    animation:spin .5s forwards;
+    animation-delay: .7s;
+}
+
+.single-animation {
+    opacity: 0;
+    animation:fadeDown .5s forwards;
+    animation-delay:1.5s;
+}
+
+
+.headline-description h5 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+
+
+.global-headline {
+    text-align: center;
+    margin-top: 3.9rem;
+}
+
+.discover-our-story .global-headline {
+    margin-top: 6.9rem;
+}
+
+.global-headline .asterisk {
+    color: #000000;
+    margin: 2.4rem 0;
+}
+
+.headline-dark {
+    color: #000000;
+    letter-spacing: 0.7rem;
+    margin-right: -0.7rem;
+}
+
+.global-headline .sub-headline {
+    letter-spacing: -1px;
+    line-height: 0.42;
+}
+
+.campos-info {
+    text-align: center;
+}
+.campos-description{
+    margin-bottom:3rem;
+}
+
+.campos-description p {
+    line-height:1.6;
+    margin-bottom:2.4rem;
+}
+
+.tasteful-recipes{
+    background:url(/img/clube/Campos-Futebol.jpg)center no-repeat;
+    background-size: cover;
+}
+
+.between{
+    min-height: 65vh;
+    display: flex;
+    align-items:center;
+}
+
+.image-group {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:1.5rem;
+}
+
+.discover-our-menu .campos-description{
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+.perfect-blend{
+    background:url(/img/clube/Campos-Futebol.jpg) center no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width:900px) {
+    section{
+        padding: 7.9rem;
+    }
+    .sub-headline{
+        font-size:10rem;
+    }
+    .first-letter{
+        font-size:12.2rem;
+    }
+    .headline{
+        font-size:4.7rem;
+        letter-spacing:.8rem;
+    }
+    .line{
+        max-width:11.4rem;
+    }
+    .campos-info{
+        display: flex;
+        align-items:center;
+    }
+    .campos-info > div{
+        flex:1;
+    }
+    .padding-right{
+        padding-right: 7rem;
+    }
+}
+@media screen and (min-width:500px) {
+    .hero{
+        margin-top:12rem;
+    }
+}
+
+@keyframes fadeUp{
+    0%{
+        transform:translateY(4rem);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform:scale(2);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+@keyframes grow{
+    0%{
+        width: 0;
+    }
+    100%{
+        opacity:1;
+        width:100%;
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes fadeDown{
+    0%{
+        transform:translateY(-1rem);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+/*1 hora e 15 minutos
+https://youtu.be/FZQxPTV3cFk
+*/
+
+

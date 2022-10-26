@@ -1,0 +1,185 @@
+/*Footer*/
+/*Sites :
+--> https://boxicons.com/?query=copy
+--> https://fonts.google.com/
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+body {
+    background-color:#f7f7f7
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+main{
+    width: 100%;
+}
+footer{
+    margin-top: 2vh;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 16px 70px -8px rgba(0,0,0,0.25);
+    border-radius: 20px 20px 0 0;
+    transition: background 0.3s linear;
+}
+
+.container-footer{
+    max-width: 1240px;
+    padding:30px 40px;
+    margin: auto;
+}
+
+.content_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profil .logo_area{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profil .logo_area img{
+    width: 4rem;
+    height: 5rem;
+    /*border-radius: 50%; A imagem Fica Redonda*/
+    border: 1px solid var(--primary-color);
+}
+
+.logo_area .logo_name{
+    font-size:2rem;
+    font-weight: 700;
+    margin: 0 1rem;
+    color: var(--secondary-color);
+}
+
+.desc_area{
+    max-width: 320px;
+    margin-bottom: 1.25rem;
+}
+.desc_area p {
+    color: #828282;
+    font-size: 11pt;
+    font-weight: 400;
+    line-height:28px /*espaçamento entre linhas*/
+}
+.social_media a{
+    color:#828282;
+    margin-right:22px;
+    font-size: 24px;
+}
+.social_media a:hover{
+    color:#313131;
+}
+.service_area{
+    display:flex;/*Mete-os lado a lado*/
+}
+.service_header{
+    margin-right: 40px;/*Espaçamento lateral entre cada um */
+}
+li.service_name{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+.service_header li a{
+    color: #828282;
+    font-size: 1rem;
+    padding-bottom: 1px;
+    font-weight: 400;
+}
+.service_header li a:hover{
+    color: #313131;
+}
+.service_header li{
+    margin-bottom: 10px;
+}
+hr{
+    height:1px;
+    border: none;
+    background-color: #828282;
+    margin-bottom: 1rem;
+}
+.footer_bottom{
+    display: flex; /*Mete lado a lado*/
+    justify-content: space-between;/*Um em cada pontaou cada lado*/
+    align-items: center;
+    font-size:0.875rem;
+}
+.copy_right{
+    color: #828282;
+    display: flex;
+    align-items: center;
+}
+.copy_right span{
+    margin-left: 8px;/*Espaço entre o icon e Texto*/
+    font-weight: 400;
+    letter-spacing:0.135rem;
+}
+.tou a{
+    color: #828282;
+    margin-left: 1.5rem;
+}
+.tou a:hover{
+    color: #313131;
+}
+
+
+
+/*Responsive*/
+@media screen and (max-width:768px){
+    .content_footer{
+        flex-wrap: wrap;
+        justify-content:left ;
+    }
+    .service_area{
+        flex-wrap: wrap;
+        justify-content:left ;
+    }
+
+    .service_header{
+        margin-left: 0;
+        margin-right: 40px;
+    }
+    .social_media{
+        margin-bottom: 1rem;
+    }
+    .footer_bottom{
+        flex-wrap: wrap;
+        justify-content:center ;
+    }
+}
+@media screen and (max-width:608px){
+    .service_header{
+        margin-right: 15px;
+    }
+}
+@media screen and (max-width:510px){
+    .desc_area,.social_media{
+        text-align: center;
+        margin:0 auto;
+    }
+    .desc_area,.social_media{
+        margin-bottom: 1.5vh;
+    }
+    .service_header{
+        margin-bottom: 8px;
+    }
+    .copy_right{
+        margin-bottom: 8px;
+    }
+}
